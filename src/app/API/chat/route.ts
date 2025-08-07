@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const API_BASE_URL = process.env.BACKEND_API_URL || "http://localhost:3000/api";
+const API_BASE_URL = process.env.BACKEND_API_URL;
 
 export async function POST(request: NextRequest) {
   // console.log("Chat API route called");

@@ -1,11 +1,12 @@
 import type { NextConfig } from "next";
+const API_BASE_URL = process.env.BACKEND_API_URL;
 
 const nextConfig: NextConfig = {
   async rewrites() {
     return [
       {
         source: "/api/:path*",
-        destination: "http://localhost:3000/api/:path*",
+        destination: `${API_BASE_URL}/:path*`,
       },
     ];
   },
